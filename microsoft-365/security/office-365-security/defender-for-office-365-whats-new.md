@@ -48,6 +48,7 @@ For more information on what's new with other Microsoft Defender security produc
   - [Compromised users report](reports-email-security.md#compromised-users-report)
   - [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report)
   - [URL protection report](reports-email-security.md#url-protection-report)
+- Attack Simulation Training now includes a "How-to Guide" as a simulation technique option. This experience enables admins to send instructions to recipients on how to report a phishing message. The message and guide can be customized by the admin to best support their organization's needs as well.
 
 ## May 2023
 
