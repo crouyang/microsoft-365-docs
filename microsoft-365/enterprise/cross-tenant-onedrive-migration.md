@@ -29,6 +29,9 @@ SharePoint administrators of two separate tenants can use the *Set-SPOCrossTenan
 
 Up to 4,000 OneDrive accounts can be scheduled for migration in advance at a given time. Once scheduled, migrations occur without the user's data ever leaving the Microsoft 365 cloud and with minimal disruption, requiring only a few minutes where a user's OneDrive will be read-only. When migrations are complete, a redirect is placed in the location of the user's original OneDrive, so any links to files and folders can continue working in the new location.
 
+>[!Important]
+>Cross-Tenant moves are a one and done migration activity. The content will be **moved** from the Source to Target, leaving behind a redirect link on Source. **Incremental and delta migration passes cannot be performed.**
+
 > [!NOTE]
 > This feature is not supported for users of the Government Cloud, including GCC, Consumer, GCC High, or DoD.
 
@@ -40,9 +43,9 @@ Microsoft 365 Business Basic/Business Standard/Business Premium/F1/F3/E3/A3/E5/A
 
 ## Prerequisites and settings
 
-- **Microsoft SharePoint Online Powershell**. Confirm you have the most recent version installed. [Download SharePoint Online Management Shell from Official Microsoft Download Center](/download/details.aspx?id=35588)
+- **Microsoft SharePoint Online Powershell**. Confirm you have the most recent version installed. [Download SharePoint Online Management Shell from the official Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35588).
 
-- **Turn off service encryption with Customer Key enabled.** Confirm that the source OneDrive tenant **doesn't** have Service encryption with Microsoft Purview Customer Key enabled. If enabled on Source tenant, the migration will fail. [Learn more on Service encryption with Microsoft Purview Customer Key](/microsoft-365/compliance/customer-key-overview)
+- **Turn off service encryption with Customer Key enabled.** Confirm that the source OneDrive tenant **doesn't** have Service encryption with Microsoft Purview Customer Key enabled. If enabled on the source tenant, the migration will fail. [Learn more on Service encryption with Microsoft Purview Customer Key](/microsoft-365/compliance/customer-key-overview).
 
 - Source OneDrive accounts must be set to Read/Write. If set to Read only, they'll fail.
 
@@ -74,10 +77,12 @@ Any legal URL will be accepted when creating your Identity Map from Source to Ta
 
 ## OneDrive account size limits
 
-Each OneDrive account can have a maximum of 2 TB of content or 1 million items.
+Each OneDrive account can have a maximum of 2 TB of content or 1 million items. 
 
->[!Important]
->If you attempt to migrate any OneDrive site that exceeds the 2GB quota, the transfer will fail.
+> [!IMPORTANT]
+> The 1 million item limit can be any "item", including files (including versions), folders, and list line entries if it is a list or library.
+>
+>If you attempt to migrate any OneDrive site that exceeds the 2 TB quota, the transfer will fail.
 
 
 ## Permissions

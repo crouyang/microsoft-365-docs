@@ -6,9 +6,9 @@ ms.author: cmcatee
 author: cmcatee-MSFT
 manager: scotv
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: microsoft-365-business
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection:
 - Tier1
 - scotvorg 
@@ -150,7 +150,7 @@ You can create and edit your custom views in the **Custom filter** pane. If you 
   
  **B - Sign-in status** Choose users that are allowed or blocked. 
   
- **C - Location** Choose a location from a drop-down list of countries. 
+ **C - Location** Choose a location from a drop-down list of countries/regions. 
   
  **D - Assigned product license** Choose from a drop-down list of licenses that are available at your organization. Use this filter to show users who have the license you selected assigned to them. Users may also have additional licenses. 
   
